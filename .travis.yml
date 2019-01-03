@@ -7,15 +7,8 @@ matrix:
     - os: linux
       dist: xenial
 
-addons:
-  apt:
-    packages:
-    - tar
-    - curl
-    - build-essential
-
 script:
-  - bash install.sh
+  - sudo bash install.sh
 
 after_script:
   - /usr/local/bin/openssl version|grep fips
