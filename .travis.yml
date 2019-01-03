@@ -12,3 +12,4 @@ script:
 
 after_script:
   - /usr/local/bin/openssl version|grep fips
+  - /usr/local/sbin/openvpn --version|grep fips
