@@ -1,0 +1,21 @@
+sudo: required
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+    - os: linux
+      dist: xenial
+
+addons:
+  apt:
+    packages:
+    - tar
+    - curl
+    - build-essential
+
+script:
+  - bash install.sh
+
+after_script:
+  - /usr/local/bin/openssl version|grep fips
